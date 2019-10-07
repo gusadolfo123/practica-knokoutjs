@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<link rel="stylesheet" href="css/select2.min.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<title>KnockoutJS</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="text-center my-4">Datos Pesonales</h1>
+			<div class="row bg-secondary text-white">
+				<div class="col-md-6 py-4">
+					<div class="form-group form-inline justify-content-between">
+						<label for="firstName" class="mx-4">Nombre: </label>
+						<input type="text" id="firstName" class="form-control w-50" data-bind="textInput: firstName" />
+					</div>
+					<div class="form-group form-inline justify-content-between">
+						<label for="lastName" class="mx-4">Apellido: </label>
+						<input type="text" id="lastName" class="form-control w-50" data-bind="textInput: lastName" />
+					</div>
+					<div class="form-group form-inline justify-content-between">
+						<label for="birthDay" class="mx-4">Fecha Nacimiento: </label>
+						<input type="date" id="birthDay" class="form-control w-50" data-bind="textInput: birthDay" />
+					</div>
+					<div class="form-group form-inline justify-content-between">
+						<label for="cities" class="mx-4">Ciudad: </label>
+						<select
+							id="cities"
+							class="form-control w-50"
+							data-bind="	options: cities,
+										optionsText: 'name',
+										value: selectedCity,
+										optionsCaption: 'Seleccionar...'"
+						></select>
+					</div>
+				</div>
+				<div class="col-md-6 py-4">
+					<div class="form-group form-inline justify-content-between">
+						<label for="firstNameR" class="mx-4">Nombre: </label>
+						<span id="firstNameR" class="form-control w-50" data-bind="text: firstName"></span>
+					</div>
+					<div class="form-group form-inline justify-content-between">
+						<label for="lastNameR" class="mx-4">Apellido: </label>
+						<span id="lastNameR" class="form-control w-50" data-bind="text: lastName"></span>
+					</div>
+					<div class="form-group form-inline justify-content-between">
+						<label for="birthDayR" class="mx-4">Fecha Nacimiento: </label>
+						<span id="birthDayR" class="form-control w-50" data-bind="text: birthDay"></span>
+					</div>
+					<div class="form-group form-inline justify-content-between">
+						<label for="citiesR" class="mx-4">Ciudad: </label>
+						<span id="citiesR" class="form-control w-50" data-bind="text: selectedCity() ? selectedCity().name : ''"></span>
+					</div>
+				</div>
+			</div>
+			<div class="row"></div>
+		</div>
+
+		<script type="text/javascript" src="js/jquery.slim.min.js"></script>
+		<script type="text/javascript" src="js/popper.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/moment.js"></script>
+		<script type="text/javascript" src="js/select2.min.js"></script>
+		<script type="text/javascript" src="js/knockout.min.js"></script>
+		<script type="text/javascript" src="./js/app.js"></script>
+	</body>
+</html>
